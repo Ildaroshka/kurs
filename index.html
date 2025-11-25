@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Концерты онлайн</title>
+
+    <!-- SEO -->
+    <meta name="description" content="Онлайн-концерты в HD качестве с чатом, донатами и интерактивом">
+    <meta name="keywords" content="концерты онлайн, музыка, трансляции">
+
+    <link rel="stylesheet" href="./css/style.css">
+</head>
+
+<body>
+
+<!-- ================= HEADER ================= -->
+<header class="header">
+    <nav class="header-container">
+        <div class="logo">ConcertFlow</div>
+
+        <ul class="nav-links">
+            <li><a href="#home">Главная</a></li>
+            <li><a href="#concerts">Концерты</a></li>
+            <li><a href="#features">Возможности</a></li>
+            <li><a href="#about">О нас</a></li>
+        </ul>
+
+        <div class="nav-buttons">
+            <button class="btn btn-login" onclick="openModal('loginModal')">Войти</button>
+            <button class="btn btn-register" onclick="openModal('registerModal')">Регистрация</button>
+        </div>
+    </nav>
+</header>
+
+<!-- ================= HERO ================= -->
+<section class="hero" id="home">
+    <div class="fade-in">
+        <h1>Погрузитесь в атмосферу живой музыки</h1>
+        <p style="margin-bottom: 40px;" >Смотрите концерты любимых исполнителей онлайн в HD</p>
+        <a href="#concerts" class="btn btn-primary">Смотреть концерты</a>
+    </div>
+
+    <div class="hero-sphere">
+        <div class="circle circle-main"></div>
+        <div class="circle circle-left"></div>
+        <div class="circle circle-right"></div>
+    </div>
+</section>
+
+<!-- ================= CONCERTS ================= -->
+<section class="concerts" id="concerts">
+    <h2 class="section-title">Ближайшие концерты</h2>
+
+    <div class="concerts-grid">
+
+        <div class="concert-card" onclick="openConcert()">
+            <div class="concert-image">
+                <img src="./img/с1.jpg" alt="">
+                <span class="live-badge">LIVE</span>
+            </div>
+            <div class="concert-info">
+                <h3>Электронная симфония</h3>
+                <p>DJ Pulse</p>
+                <div class="concert-meta">
+                    <span>Сегодня 20:00</span>
+                    <span>⭐4.8</span>
+                </div>
+                <div class="concert-price">Бесплатно</div>
+            </div>
+        </div>
+
+        <div class="concert-card">
+            <div class="concert-image">
+                <img src="./img/с1.jpg" alt="">
+            </div>
+            <div class="concert-info">
+                <h3>Акустический вечер</h3>
+                <p>Мария Иванова</p>
+                <div class="concert-meta">
+                    <span>Завтра 19:30</span>
+                    <span>⭐4.9</span>
+                </div>
+                <div class="concert-price">490 ₽</div>
+            </div>
+        </div>
+
+        <div class="concert-card">
+            <div class="concert-image">
+                <img src="./img/с1.jpg" alt="">
+            </div>
+            <div class="concert-info">
+                <h3>Рок-революция</h3>
+                <p>The Midnight Riders</p>
+                <div class="concert-meta">
+                    <span>15 декабря</span>
+                    <span>⭐4.7</span>
+                </div>
+                <div class="concert-price">790 ₽</div>
+            </div>
+        </div>
+
+    </div>
+</section>
+
+<!-- ================= FEATURES ================= -->
+<section class="features" id="features">
+    <h2 class="section-title">Почему нас выбирают</h2>
+
+    <div class="features-grid">
+        <div class="feature-card"><div class="feature-icon">🎵</div>HD качество</div>
+        <div class="feature-card"><div class="feature-icon">💬</div>Живой чат</div>
+        <div class="feature-card"><div class="feature-icon">🎁</div>Интерактив</div>
+        <div class="feature-card"><div class="feature-icon">📱</div>Доступность</div>
+    </div>
+</section>
+
+<!-- ================= ABOUT ================= -->
+<section class="about" id="about">
+    <div class="about-inner">
+        <h2 class="section-title glow-text">О нас</h2>
+        <p class="about-desc">
+            ConcertFlow — это платформа онлайн-концертов нового поколения, 
+            объединяющая артистов и зрителей в одном виртуальном пространстве.
+            Погрузитесь в атмосферу живой музыки, участвуйте в интерактивных шоу 
+            и поддерживайте любимых исполнителей в реальном времени.
+        </p>
+        <div class="about-features">
+            <div class="feature">
+                <span>🎵</span>
+                <p>HD трансляции и кристально чистый звук</p>
+            </div>
+            <div class="feature">
+                <span>💬</span>
+                <p>Живой чат с другими зрителями</p>
+            </div>
+            <div class="feature">
+                <span>🎁</span>
+                <p>Донаты и интерактив с артистами</p>
+            </div>
+        </div>
+    </div>
+    <div class="about-bg"></div>
+</section>
+
+<!-- ================= UPDATED PLAYER BLOCK ================= -->
+<!-- ================= POPULAR ARTISTS ================= -->
+<section class="artists" id="artists">
+    <h2 class="section-title">Популярные артисты</h2>
+    <div class="artists-grid">
+        <div class="artist-card">
+            <img src="./img/artist1.jpg" alt="DJ Pulse">
+            <h3>Мария Иванова</h3>
+            <p>Электронная музыка</p>
+        </div>
+        <div class="artist-card">
+            <img src="./img/artist2.jpg" alt="DJ Pulse">
+            <h3>DJ Pulse</h3>
+            <p>Электронная музыка</p>
+        </div>
+        <div class="artist-card">
+            <img src="./img/artist1.jpg" alt="DJ Pulse">
+            <h3>Мария Иванова</h3>
+            <p>Электронная музыка</p>
+        </div>
+        <div class="artist-card">
+            <img src="./img/artist2.jpg" alt="DJ Pulse">
+            <h3>DJ Pulse</h3>
+            <p>Электронная музыка</p>
+        </div>
+    </div>
+</section>
+
+
+
+<!-- ================= NEWSLETTER SUBSCRIBE ================= -->
+<section class="subscribe" id="subscribe">
+    <h2 class="section-title">Подпишитесь на новости</h2>
+    <p>Будьте в курсе ближайших концертов и специальных акций</p>
+    <form class="subscribe-form">
+        <input type="email" placeholder="Введите ваш email" required>
+        <button type="submit" class="btn btn-primary">Подписаться</button>
+    </form>
+</section>
+
+
+<!-- ================= FOOTER ================= -->
+<footer>
+    <div class="footer-content">
+        <p>© 2025 ConcertFlow — Все права защищены</p>
+    </div>
+</footer>
+
+
+<!-- ================= MODALS ================= -->
+<div id="loginModal" class="modal">
+  <div class="modal-content">
+    <span class="close" onclick="closeModal('loginModal')">&times;</span>
+    <h2>Вход</h2>
+    <input type="text" placeholder="Email или логин" class="modal-input">
+    <input type="password" placeholder="Пароль" class="modal-input">
+    <button class="btn btn-primary modal-btn">Войти</button>
+    <p class="modal-switch">Нет аккаунта? <span onclick="switchModal('registerModal', 'loginModal')">Зарегистрироваться</span></p>
+  </div>
+</div>
+
+<div id="registerModal" class="modal">
+  <div class="modal-content">
+    <span class="close" onclick="closeModal('registerModal')">&times;</span>
+    <h2>Регистрация</h2>
+    <input type="text" placeholder="Имя" class="modal-input">
+    <input type="text" placeholder="Email" class="modal-input">
+    <input type="password" placeholder="Пароль" class="modal-input">
+    <button class="btn btn-primary modal-btn">Создать аккаунт</button>
+    <p class="modal-switch">Уже есть аккаунт? <span onclick="switchModal('loginModal', 'registerModal')">Войти</span></p>
+  </div>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>

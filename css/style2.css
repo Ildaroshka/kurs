@@ -1,0 +1,120 @@
+/* ================= LIVE CONCERT ================= */
+.live-concert .concert-container {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+.video-section {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2rem;
+}
+
+.video-player {
+    flex: 1 1 600px;
+    position: relative;
+    border-radius: 20px;
+    overflow: hidden;
+    background: #1a1a1d;
+    box-shadow: 0 0 40px rgba(120, 110, 245, 0.4);
+}
+
+.video-placeholder {
+    width: 100%;
+    display: block;
+}
+
+.video-info {
+    flex: 1 1 400px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    color: #ddd;
+}
+
+.video-title {
+    font-size: 2rem;
+    margin-bottom: 0.5rem;
+    background: linear-gradient(90deg, #ff6ec4, #7873f5);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.video-subtitle {
+    font-size: 1rem;
+    color: #aaa;
+    margin-bottom: 1rem;
+}
+
+.concert-time {
+    display: flex;
+    gap: 1rem;
+}
+
+.time-pill {
+    background: #222;
+    padding: 0.3rem 0.8rem;
+    border-radius: 15px;
+    font-size: 0.9rem;
+}
+
+.time-pill.hot {
+    background: #ff2e63;
+    color: #fff;
+    box-shadow: 0 0 10px #ff2e63;
+}
+
+/* ================= INTERACTIVE ================= */
+.interactive-section {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2rem;
+}
+
+.chat-container, .poll-container {
+    flex: 1 1 300px;
+    display: flex;
+    flex-direction: column;
+}
+
+.chat-box {
+    background: #111;
+    flex: 1;
+    min-height: 200px;
+    padding: 1rem;
+    border-radius: 15px;
+    margin-bottom: 0.5rem;
+    overflow-y: auto;
+    font-size: 0.9rem;
+    color: #ccc;
+}
+
+.chat-input {
+    padding: 0.5rem 1rem;
+    border-radius: 50px;
+    border: none;
+    background: #222;
+    color: #fff;
+    margin-bottom: 0.5rem;
+}
+
+.poll-option {
+    background: #222;
+    margin-bottom: 0.5rem;
+    padding: 0.5rem 1rem;
+    border-radius: 15px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.poll-option:hover {
+    background: #7873f5;
+    color: #fff;
+    box-shadow: 0 0 15px #7873f5;
+}
+
+@media (max-width: 900px) {
+    .video-section { flex-direction: column; }
+    .interactive-section { flex-direction: column; }
+}

@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Прямой концерт - ConcertFlow</title>
+    <link rel="stylesheet" href="./css/style2.css">
+    <link rel="stylesheet" href="./css/style.css">
+</head>
+<body class="dark">
+
+<header class="header">
+    <nav class="header-container">
+        <div class="logo">ConcertFlow</div>
+        <ul class="nav-links">
+            <li><a href="index.html">Главная</a></li>
+            <li><a href="#chat">Чат</a></li>
+            <li><a href="#interactive">Интерактив</a></li>
+        </ul>
+    </nav>
+</header>
+
+<section class="live-concert" style="padding:140px 20px;">
+    <div class="concert-container">
+
+        <!-- Видеоплеер -->
+        <div class="video-section neo-card">
+            <div class="video-player">
+                <img src="img/hero-video-placeholder.jpg" alt="Концерт" class="video-placeholder">
+                <div class="live-label neon-pulse">LIVE</div>
+            </div>
+            <div class="video-info">
+                <h1 class="video-title">DreamFlow Music Fest</h1>
+                <p class="video-subtitle">Электронная музыка с уникальным визуальным шоу</p>
+                <div class="concert-time">
+                    <span class="time-pill">⏳ Идёт сейчас</span>
+                    <span class="time-pill hot">🔥 12 403 зрителей</span>
+                </div>
+            </div>
+        </div>
+
+        <!-- Интерактивная панель -->
+        <div class="interactive-section">
+            <!-- Чат -->
+            <div class="chat-container neo-card">
+                <h3 class="block-title">💬 Чат</h3>
+                <div class="chat-box" id="chatBox"></div>
+                <input type="text" placeholder="Написать сообщение..." class="chat-input" id="chatInput">
+                <button class="btn btn-primary" onclick="sendMessage()">Отправить</button>
+            </div>
+
+            <!-- Голосование / интерактив -->
+            <div class="poll-container neo-card">
+                <h3 class="block-title">🗳 Голосование</h3>
+                <div class="poll-option" onclick="vote('Энергичный')">🔥 Энергичный трек</div>
+                <div class="poll-option" onclick="vote('Спокойный')">🎧 Спокойный</div>
+                <div class="poll-option" onclick="vote('Рок-композиция')">🎸 Рок-композиция</div>
+            </div>
+        </div>
+
+    </div>
+</section>
+
+<footer>
+    <div class="footer-content">
+        <p>© 2025 ConcertFlow — Все права защищены</p>
+    </div>
+</footer>
+
+<script>
+    // JS для чата
+    function sendMessage() {
+        const input = document.getElementById('chatInput');
+        const chatBox = document.getElementById('chatBox');
+        if(input.value.trim() !== '') {
+            const msg = document.createElement('div');
+            msg.textContent = input.value;
+            msg.style.marginBottom = '5px';
+            chatBox.appendChild(msg);
+            chatBox.scrollTop = chatBox.scrollHeight;
+            input.value = '';
+        }
+    }
+
+    // JS для голосования
+    function vote(option) {
+        alert('Вы проголосовали за: ' + option);
+    }
+</script>
+
+</body>
+</html>
